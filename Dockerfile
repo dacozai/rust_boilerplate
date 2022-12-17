@@ -29,6 +29,6 @@ RUN apt update && apt upgrade -y && apt install mariadb-server -y
 COPY --from=builder /app/target/release/rust_boilerplate /app/rust_boilerplate
 COPY --from=builder /app/src/cfg /app/src/cfg
 WORKDIR /app
-EXPOSE 5001
+EXPOSE 377
 
 CMD ["./rust_boilerplate"]
