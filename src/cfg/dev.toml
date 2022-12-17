@@ -1,0 +1,6 @@
+port = "377"
+host = "0.0.0.0"
+
+log_level = "info"
+
+mysql = "mysql://root:@127.0.0.1:3306/for_test"
