@@ -1,12 +1,11 @@
 extern crate env_logger;
 use actix_web::{App, middleware::Logger, HttpServer};
 use rust_boilerplate::*;
-use db::sql::mysql as MySQL;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     cfg::init_config().await;
-    MySQL::init();
+    db::sql::mysql::init();
 
     env_logger::init_from_env(env_logger::Env::new()
         .default_filter_or(cfg::read("log_level")));
